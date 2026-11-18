@@ -15,14 +15,15 @@ A 12-week self-study plan for senior/architect growth: distributed systems in Go
 
 | Folder | Content |
 | --- | --- |
-| `notes/papers/` | 5 lines per paper: problem, solution, trade-off |
-| `notes/books/` | 3 ideas per chapter + 1 idea to apply at work |
-| `weekly/` | Sunday weekly note, for example `2026-W48.md` |
-| `adr/` | ADRs, from `adr/0000-template.md` |
+| `glomers/<n>-<name>/` | Gossip Glomers solutions, one Go module per challenge (e.g. `glomers/1-echo`) |
+| `notes/papers/` | 5 lines per paper: problem, key idea, trade-off, 1 failure case, 1 open question |
+| `notes/books/` | One file per book, a `## Week N` section per week: 3 ideas + 1 idea to apply at work |
+| `weekly/` | One note per ISO week, for example `2026-W48.md`. Friday's post-mortem answer goes here too |
+| `adr/` | ADRs, numbered `0001-<short-title>.md`, from `adr/0000-template.md` |
 
 > [!WARNING]
 > This repo is public.
-> - Do not commit MIT 6.5840 lab solutions. Read the course collaboration policy first.
+> - Do not commit MIT 6.5840 lab code. The [collaboration policy](https://pdos.csail.mit.edu/6.824/labs/collab.html) asks you not to publish it. Work in `~/6.5840`, back it up only to a private repo.
 > - Do not write confidential work details in ADRs.
 
 ## Weekly template
@@ -48,17 +49,17 @@ Weeks 1–6: Gossip Glomers. Weeks 7–12: MIT 6.5840 labs. Each paper matches t
 | Week | Code (Tue, Thu, Sat) | Paper (Mon) | Book (Wed) | Sunday |
 | --- | --- | --- | --- | --- |
 | 1 | Set up [Maelstrom](https://github.com/jepsen-io/maelstrom), then [Echo](https://fly.io/dist-sys/1) and [Unique ID](https://fly.io/dist-sys/2) | MapReduce (2004) | [A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/aposd.php): first 1/4 | Weekly note |
-| 2 | [Broadcast](https://fly.io/dist-sys/3a): first parts | GFS (2003) | APOSD: 2/4 | ADR #1 |
-| 3 | Broadcast: remaining parts | Chain Replication (2004) | APOSD: 3/4 | Weekly note |
+| 2 | Broadcast [3a](https://fly.io/dist-sys/3a), [3b](https://fly.io/dist-sys/3b), [3c](https://fly.io/dist-sys/3c) | GFS (2003) | APOSD: 2/4 | ADR #1 |
+| 3 | Broadcast [3d](https://fly.io/dist-sys/3d), [3e](https://fly.io/dist-sys/3e) (efficiency) | Chain Replication (2004) | APOSD: 3/4 | Weekly note |
 | 4 | [Grow-Only Counter](https://fly.io/dist-sys/4) | ZooKeeper (2010) | APOSD: last 1/4 | ADR #2 |
-| 5 | [Kafka-Style Log](https://fly.io/dist-sys/5a) | Linearizability (Herlihy), through Section 3.1 | [Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888): chapters 1–2 | Weekly note |
-| 6 | [Totally-Available Transactions](https://fly.io/dist-sys/6a) | Distributed Transactions (6.033, chapter 9, selected sections) | The Hard Parts: chapter 12, Transactional Sagas | ADR #3 |
+| 5 | Kafka-Style Log [5a](https://fly.io/dist-sys/5a), [5b](https://fly.io/dist-sys/5b), [5c](https://fly.io/dist-sys/5c) | Linearizability (Herlihy), through Section 3.1 | [Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888): chapters 1–2 | Weekly note |
+| 6 | Totally-Available Transactions [6a](https://fly.io/dist-sys/6a), [6b](https://fly.io/dist-sys/6b), [6c](https://fly.io/dist-sys/6c) | Distributed Transactions (6.033, chapter 9, selected sections) | The Hard Parts: chapter 12, Transactional Sagas | ADR #3 |
 | 7 | [MIT Lab 1: MapReduce](https://pdos.csail.mit.edu/6.824/labs/lab-mr.html) | Spanner (2012) | The Hard Parts: chapter 4, Architectural Decomposition | Weekly note |
 | 8 | [MIT Lab 2: Key/Value server](https://pdos.csail.mit.edu/6.824/labs/lab-kvsrv1.html) | Memcached at Facebook (2013) | The Hard Parts: 1 chapter that fits your work | ADR #4 |
-| 9 | [MIT Lab 3: Raft](https://pdos.csail.mit.edu/6.824/labs/lab-raft1.html), part 1 | Raft (extended): to the end of Section 5 | [Staff Engineer](https://staffeng.com/book) (Will Larson): first half | Weekly note |
-| 10 | Lab 3, part 2 | Raft: Section 7 to the end (not Section 6) | Staff Engineer: second half | ADR #5 |
-| 11 | Lab 3, part 3 | FaRM (2015) | [The Staff Engineer's Path](https://www.oreilly.com/library/view/the-staff-engineers-path/9781098118723/): selected chapters | Weekly note |
-| 12 | Lab 3: finish, all tests pass | On-demand Container Loading (2023, AWS Lambda) | The Staff Engineer's Path: continue | ADR #6 + 12-week retro |
+| 9 | [MIT Lab 3A](https://pdos.csail.mit.edu/6.824/labs/lab-raft1.html): leader election | Raft (extended): to the end of Section 5 | [Staff Engineer](https://staffeng.com/book) (Will Larson): first half | Weekly note |
+| 10 | Lab 3B: log | Raft: Section 7 to the end (not Section 6) | Staff Engineer: second half | ADR #5 |
+| 11 | Lab 3C: persistence | FaRM (2015) | [The Staff Engineer's Path](https://www.oreilly.com/library/view/the-staff-engineers-path/9781098118723/): selected chapters | Weekly note |
+| 12 | Lab 3D: log compaction | On-demand Container Loading (2023, AWS Lambda) | The Staff Engineer's Path: continue | ADR #6 + 12-week retro |
 
 The paper links are in the [MIT 6.5840 schedule](https://pdos.csail.mit.edu/6.824/schedule.html), next to each lecture. The Raft lab can take more than 4 weeks. This is normal: move the plan by one week.
 
