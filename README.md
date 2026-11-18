@@ -1,114 +1,105 @@
-# Həftəlik öyrənmə rutini — Senior/Arxitekt yolu (12 həftə)
+# distsys-learning
 
-## Bu repo necə işləyir
+A 12-week self-study plan for senior/architect growth: distributed systems in Go, papers, books and architecture decision records (ADRs).
 
-- **Backlog:** hər həftə bir [Milestone](https://github.com/tabrizgulmammadov/distsys-learning/milestones)-dir. Hər iş bir [Issue](https://github.com/tabrizgulmammadov/distsys-learning/issues)-dir.
-- **Label-lər:** `kod`, `paper`, `kitab`, `real-dunya`, `yazi`.
-- **Həftə bitəndə:** issue-ları bağla. Milestone faizi irəliləyişi göstərir.
+- **Time budget:** 8 hours per week (1 hour per day, 2 hours on Saturday). 96 hours in total.
+- **Dates:** Monday, 23 November 2026 – Sunday, 14 February 2027.
+- **Split:** 50% building code, 25% reading, 25% real-world cases and writing. Video is optional.
 
-| Qovluq | Nə yazılır |
+## How this repo works
+
+- **Backlog:** each week is a [milestone](https://github.com/tabrizgulmammadov/distsys-learning/milestones). Each task is an [issue](https://github.com/tabrizgulmammadov/distsys-learning/issues).
+- **Labels:** `code`, `paper`, `book`, `real-world`, `writing`.
+- **End of the week:** close the issues. The milestone shows the progress.
+- **Regenerate the backlog:** `python3 scripts/backlog.py OWNER/REPO`. The script skips items that already exist.
+
+| Folder | Content |
 | --- | --- |
-| `notes/papers/` | Hər paper üçün 5 sətir: problem, həll, trade-off |
-| `notes/books/` | Hər fəsil üçün 3 fikir + işdə 1 tətbiq ideyası |
-| `weekly/` | Bazar günü həftəlik qeyd (`2026-W48.md` kimi) |
-| `adr/` | ADR-lər, `adr/0000-template.md` şablonu ilə |
+| `notes/papers/` | 5 lines per paper: problem, solution, trade-off |
+| `notes/books/` | 3 ideas per chapter + 1 idea to apply at work |
+| `weekly/` | Sunday weekly note, for example `2026-W48.md` |
+| `adr/` | ADRs, from `adr/0000-template.md` |
 
-Diqqət:
+> [!WARNING]
+> This repo is public.
+> - Do not commit MIT 6.5840 lab solutions. Read the course collaboration policy first.
+> - Do not write confidential work details in ADRs.
 
-- MIT 6.5840 lab həllərini public repo-ya qoyma. Kursun collaboration policy-sinə bax.
-- ADR-lərdə işdəki konfidensial detalları yazma. Repo-nu public etsən, əvvəlcə ADR-ləri yoxla.
+## Weekly template
 
-Tarix: 18 noyabr 2026
+Each day has one task and one output. No output means the day is not done.
 
-## Xülasə
-
-Plan 12 həftədir: həftədə 8 saat, cəmi 96 saat. Hər gün 1 saat ayırırsan, şənbə günü isə 2 saat.
-
-Vaxtın yarısı öz əlinlə qurmağa gedir. Video sadəcə əlavədir.
-
-| Blok | Həftədə | Pay |
-| --- | --- | --- |
-| Kod (Go): Gossip Glomers, sonra MIT 6.5840 labları | 4 saat | 50% |
-| Oxu: 1 paper + 1 kitab fəsli | 2 saat | 25% |
-| Real dünya və yazı: post-mortem, bloq, ADR | 2 saat | 25% |
-
-Başlanğıc: 23 noyabr 2026 (bazar ertəsi). Son: 14 fevral 2027.
-
-## Həftəlik şablon
-
-Hər günün bir işi və bir nəticəsi var. Nəticə olmasa, o günü bitmiş sayma.
-
-| Gün | Vaxt | Fəaliyyət | Nəticə |
+| Day | Time | Task | Output |
 | --- | --- | --- | --- |
-| Bazar ertəsi | 1 saat | Həftənin paper-ini oxu | 5 sətir qeyd: problem, həll, trade-off |
-| Çərşənbə axşamı | 1 saat | Kod: həftənin tapşırığı | 1 commit |
-| Çərşənbə | 1 saat | Kitab: həftənin fəsli | 3 fikir + işdə 1 tətbiq ideyası |
-| Cümə axşamı | 1 saat | Kod: davam | 1 commit, testlər |
-| Cümə | 1 saat | 1 post-mortem + 1 bloq yazısı | 1 cavab: "Bu bizə də ola bilərmi?" |
-| Şənbə | 2 saat | Kod: dərin sessiya | Tapşırığın testi keçir |
-| Bazar | 1 saat | Yazı: həftəlik qeyd və ya ADR | 1 səhifə |
+| Monday | 1 h | Read the paper of the week | 5-line note: problem, solution, trade-off |
+| Tuesday | 1 h | Code: the task of the week | 1 commit |
+| Wednesday | 1 h | Book: the chapter of the week | 3 ideas + 1 idea to apply at work |
+| Thursday | 1 h | Code: continue | 1 commit, tests |
+| Friday | 1 h | 1 post-mortem + 1 blog post | 1 answer: "Can this happen to us?" |
+| Saturday | 2 h | Code: deep session | The task tests pass |
+| Sunday | 1 h | Writing: weekly note or ADR | 1 page |
 
-Cəmi: 8 saat. Bir günü buraxsan, onu şənbəyə əlavə etmə. Sadəcə növbəti gündən davam et.
+If you miss a day, do not add it to Saturday. Continue from the next day.
 
-## 12 həftəlik plan
+## 12-week plan
 
-Həftə 1–6: Gossip Glomers. Həftə 7–12: MIT 6.5840 labları. Paper-lər kodla eyni mövzuda gedir.
+Weeks 1–6: Gossip Glomers. Weeks 7–12: MIT 6.5840 labs. Each paper matches the topic of the code task.
 
-| Həftə | Kod (Ç.a., C.a., Ş.) | Paper (B.e.) | Kitab (Ç.) | Bazar yazısı |
+| Week | Code (Tue, Thu, Sat) | Paper (Mon) | Book (Wed) | Sunday |
 | --- | --- | --- | --- | --- |
-| 1 | Əvvəlcə [Maelstrom](https://github.com/jepsen-io/maelstrom) qur. Sonra [Echo](https://fly.io/dist-sys/1) və [Unique ID](https://fly.io/dist-sys/2) | MapReduce (2004) | [A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/aposd.php): kitabın 1/4-i | Həftəlik qeyd |
-| 2 | [Broadcast](https://fly.io/dist-sys/3a): ilk hissələr | GFS (2003) | APOSD: 2/4 | ADR #1 |
-| 3 | Broadcast: qalan hissələr | Chain Replication (2004) | APOSD: 3/4 | Həftəlik qeyd |
-| 4 | [Grow-Only Counter](https://fly.io/dist-sys/4) | ZooKeeper (2010) | APOSD: son 1/4 | ADR #2 |
-| 5 | [Kafka-Style Log](https://fly.io/dist-sys/5a) | Linearizability (Herlihy), 3.1-ə qədər | [Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888): fəsil 1–2 | Həftəlik qeyd |
-| 6 | [Totally-Available Transactions](https://fly.io/dist-sys/6a) | Distributed Transactions (6.033, fəsil 9, seçilmiş hissələr) | The Hard Parts: fəsil 12, Transactional Sagas | ADR #3 |
-| 7 | [MIT Lab 1: MapReduce](https://pdos.csail.mit.edu/6.824/labs/lab-mr.html) | Spanner (2012) | The Hard Parts: fəsil 4, Architectural Decomposition | Həftəlik qeyd |
-| 8 | [MIT Lab 2: Key/Value server](https://pdos.csail.mit.edu/6.824/labs/lab-kvsrv1.html) | Memcached at Facebook (2013) | The Hard Parts: işinə uyğun 1 fəsil | ADR #4 |
-| 9 | [MIT Lab 3: Raft](https://pdos.csail.mit.edu/6.824/labs/lab-raft1.html): 1-ci hissə | Raft (extended): 5-ci bölmənin sonuna qədər | [Staff Engineer](https://staffeng.com/book) (Will Larson): 1-ci yarı | Həftəlik qeyd |
-| 10 | Lab 3: 2-ci hissə | Raft: 7-ci bölmədən sona qədər (6-cı bölmə yox) | Staff Engineer: 2-ci yarı | ADR #5 |
-| 11 | Lab 3: 3-cü hissə | FaRM (2015) | [The Staff Engineer's Path](https://www.oreilly.com/library/view/the-staff-engineers-path/9781098118723/): seçilmiş fəsillər | Həftəlik qeyd |
-| 12 | Lab 3: bitir, bütün testlər keçsin | On-demand Container Loading (2023, AWS Lambda) | The Staff Engineer's Path: davam | ADR #6 + 12 həftənin retrosu |
+| 1 | Set up [Maelstrom](https://github.com/jepsen-io/maelstrom), then [Echo](https://fly.io/dist-sys/1) and [Unique ID](https://fly.io/dist-sys/2) | MapReduce (2004) | [A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/aposd.php): first 1/4 | Weekly note |
+| 2 | [Broadcast](https://fly.io/dist-sys/3a): first parts | GFS (2003) | APOSD: 2/4 | ADR #1 |
+| 3 | Broadcast: remaining parts | Chain Replication (2004) | APOSD: 3/4 | Weekly note |
+| 4 | [Grow-Only Counter](https://fly.io/dist-sys/4) | ZooKeeper (2010) | APOSD: last 1/4 | ADR #2 |
+| 5 | [Kafka-Style Log](https://fly.io/dist-sys/5a) | Linearizability (Herlihy), through Section 3.1 | [Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888): chapters 1–2 | Weekly note |
+| 6 | [Totally-Available Transactions](https://fly.io/dist-sys/6a) | Distributed Transactions (6.033, chapter 9, selected sections) | The Hard Parts: chapter 12, Transactional Sagas | ADR #3 |
+| 7 | [MIT Lab 1: MapReduce](https://pdos.csail.mit.edu/6.824/labs/lab-mr.html) | Spanner (2012) | The Hard Parts: chapter 4, Architectural Decomposition | Weekly note |
+| 8 | [MIT Lab 2: Key/Value server](https://pdos.csail.mit.edu/6.824/labs/lab-kvsrv1.html) | Memcached at Facebook (2013) | The Hard Parts: 1 chapter that fits your work | ADR #4 |
+| 9 | [MIT Lab 3: Raft](https://pdos.csail.mit.edu/6.824/labs/lab-raft1.html), part 1 | Raft (extended): to the end of Section 5 | [Staff Engineer](https://staffeng.com/book) (Will Larson): first half | Weekly note |
+| 10 | Lab 3, part 2 | Raft: Section 7 to the end (not Section 6) | Staff Engineer: second half | ADR #5 |
+| 11 | Lab 3, part 3 | FaRM (2015) | [The Staff Engineer's Path](https://www.oreilly.com/library/view/the-staff-engineers-path/9781098118723/): selected chapters | Weekly note |
+| 12 | Lab 3: finish, all tests pass | On-demand Container Loading (2023, AWS Lambda) | The Staff Engineer's Path: continue | ADR #6 + 12-week retro |
 
-Paper-lərin linkləri [MIT 6.5840 schedule](https://pdos.csail.mit.edu/6.824/schedule.html) səhifəsində hər mühazirənin yanındadır. Raft labı 4 həftədən uzun çəkə bilər. Bu normaldır: planı bir həftə sürüşdür.
+The paper links are in the [MIT 6.5840 schedule](https://pdos.csail.mit.edu/6.824/schedule.html), next to each lecture. The Raft lab can take more than 4 weeks. This is normal: move the plan by one week.
 
-## Mənbələr və linklər
+## Sources
 
-Linkləri 18 noyabr 2026-da açıb yoxladım. "Ayrıca açılmayıb" yazılan sətirlərdə linki başqa rəsmi səhifədə gördüm, özünü ayrıca açmadım.
+Links checked on 18 November 2026. "Not opened separately" means the link came from another official page.
 
-| Mənbə | Harada | Status |
+| Source | Used for | Status |
 | --- | --- | --- |
-| [Gossip Glomers](https://fly.io/dist-sys/) | Kod, həftə 1–6 | Açıldı: 6 tapşırıq |
-| [Maelstrom](https://github.com/jepsen-io/maelstrom) | Kod, həftə 1 | Fly.io səhifəsindən götürülüb, ayrıca açılmayıb |
-| [MIT 6.5840](https://pdos.csail.mit.edu/6.824/) | Kod və paper, həftə 1–12 | Açıldı: Spring 2026 |
-| [MIT 6.5840 schedule](https://pdos.csail.mit.edu/6.824/schedule.html) | Paper linkləri | Açıldı |
-| [A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/aposd.php) | Kitab, həftə 1–4 | Müəllifin səhifəsi, axtarışda tapıldı |
-| [Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888) | Kitab, həftə 5–8 | O'Reilly səhifəsi tapıldı |
-| [Staff Engineer](https://staffeng.com/book) | Kitab, həftə 9–10 | Açıldı: kitabın çoxu saytda pulsuzdur |
-| [The Staff Engineer's Path](https://www.oreilly.com/library/view/the-staff-engineers-path/9781098118723/) | Kitab, həftə 11–12 | O'Reilly səhifəsi tapıldı |
-| [Dan Luu: post-mortems](https://github.com/danluu/post-mortems) | Cümə: post-mortem | Açıldı |
-| [Google SRE kitabı](https://sre.google/sre-book/table-of-contents/) | Cümə: post-mortem əvəzinə 1 fəsil | Açıldı: CC BY-NC-ND lisenziyası |
-| [Marc Brooker](https://brooker.co.za/blog/) | Cümə: bloq | Açıldı: son yazı 16.11.2026 |
-| [Murat Demirbas](https://muratbuffalo.blogspot.com/) | Cümə: bloq | Açıldı: son yazı 18.11.2026 |
-| [Jack Vanlightly](https://jack-vanlightly.com/) | Cümə: bloq | Açıldı: son yazı 28.08.2026 |
-| [Architecture Weekly](https://www.architecture-weekly.com/) (Oskar Dudycz) | Cümə: bloq | Açıldı, son yazının tarixi görünmədi |
-| [Jepsen analizləri](https://jepsen.io/analyses) | Cümə: bloq | Fly.io səhifəsindən götürülüb, ayrıca açılmayıb |
-| [ADR şablonları](https://adr.github.io/adr-templates/) | Bazar: ADR | adr.github.io səhifəsində görüldü |
-| [Nygard: Documenting Architecture Decisions](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions.html) | Bazar: ADR | adr.github.io səhifəsindən götürülüb, ayrıca açılmayıb |
+| [Gossip Glomers](https://fly.io/dist-sys/) | Code, weeks 1–6 | Opened: 6 challenges |
+| [Maelstrom](https://github.com/jepsen-io/maelstrom) | Code, week 1 | From the Fly.io page, not opened separately |
+| [MIT 6.5840](https://pdos.csail.mit.edu/6.824/) | Code and papers, weeks 1–12 | Opened: Spring 2026 |
+| [MIT 6.5840 schedule](https://pdos.csail.mit.edu/6.824/schedule.html) | Paper links | Opened |
+| [A Philosophy of Software Design](https://web.stanford.edu/~ouster/cgi-bin/aposd.php) | Book, weeks 1–4 | Author's page, found by search |
+| [Software Architecture: The Hard Parts](https://www.oreilly.com/library/view/software-architecture-the/9781492086888) | Book, weeks 5–8 | O'Reilly page found |
+| [Staff Engineer](https://staffeng.com/book) | Book, weeks 9–10 | Opened: most of the book is free on the site |
+| [The Staff Engineer's Path](https://www.oreilly.com/library/view/the-staff-engineers-path/9781098118723/) | Book, weeks 11–12 | O'Reilly page found |
+| [Dan Luu: post-mortems](https://github.com/danluu/post-mortems) | Friday: post-mortem | Opened |
+| [Google SRE book](https://sre.google/sre-book/table-of-contents/) | Friday: 1 chapter instead of a post-mortem | Opened: CC BY-NC-ND license |
+| [Marc Brooker](https://brooker.co.za/blog/) | Friday: blog | Opened |
+| [Murat Demirbas](https://muratbuffalo.blogspot.com/) | Friday: blog | Opened |
+| [Jack Vanlightly](https://jack-vanlightly.com/) | Friday: blog | Opened |
+| [Architecture Weekly](https://www.architecture-weekly.com/) (Oskar Dudycz) | Friday: blog | Opened |
+| [Jepsen analyses](https://jepsen.io/analyses) | Friday: blog | From the Fly.io page, not opened separately |
+| [ADR templates](https://adr.github.io/adr-templates/) | Sunday: ADR | Listed on adr.github.io |
+| [Nygard: Documenting Architecture Decisions](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions.html) | Sunday: ADR | From adr.github.io, not opened separately |
 
-12 həftədən sonra: [CMU 15-445 Database Systems](https://15445.courses.cs.cmu.edu/) (videolar CMU-DB YouTube kanalındadır), [Learning Domain-Driven Design](https://www.oreilly.com/library/view/-/9781098100124), [DDIA 2-ci nəşr](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781098119058/).
+After the 12 weeks: [CMU 15-445 Database Systems](https://15445.courses.cs.cmu.edu/) (videos on the CMU-DB YouTube channel), [Learning Domain-Driven Design](https://www.oreilly.com/library/view/-/9781098100124), [Designing Data-Intensive Applications, 2nd edition](https://www.oreilly.com/library/view/designing-data-intensive-applications/9781098119058/).
 
-## Qaydalar
+## Rules
 
-- **Video:** həftədə ən çox 1 saat, planın bitdiyi günlərdə. Plandakı işi videoya dəyişmə.
-- **45 dəqiqə qaydası:** 45 dəqiqə ilişsən, Fly.io Community Discourse-da #dist-sys-challenge tag-inə bax. Sonra özün davam et.
-- **LLM qaydası:** həll kodunu LLM-dən alma. Konsept haqqında soruş, kodu özün yaz. Məqsəd kodun özü deyil, sistemin necə sıradan çıxdığını başında qurmaqdır.
-- **ADR:** işdəki real bir qərarı seç. Nygard şablonu: Title, Status, Context, Decision, Consequences. 1 səhifədən uzun yazma.
-- **Gecikmə:** plan tarixə bağlı deyil. Həftəni buraxsan, cədvəldə eyni sətrdən davam et.
+- **Video:** 1 hour per week at most, only after the plan of the day is done. Do not replace a planned task with a video.
+- **45-minute rule:** if you are stuck for 45 minutes, look at the #dist-sys-challenge tag on the Fly.io Community Discourse. Then continue on your own.
+- **LLM rule:** do not take solution code from an LLM. Ask about concepts, write the code yourself. The goal is to build a mental model of how the system fails.
+- **ADR:** pick 1 real decision from work. Template: Title, Status, Context, Decision, Consequences. Keep it to 1 page.
+- **Delays:** the plan is not tied to dates. If you miss a week, continue from the same row.
 
-Bazar günü yoxla:
+Sunday checklist:
 
-- [ ] 3 kod sessiyası oldu
-- [ ] Paper qeydi yazıldı
-- [ ] Kitab qeydi yazıldı
-- [ ] 1 post-mortem və 1 bloq yazısı oxundu
-- [ ] Bazar yazısı (qeyd və ya ADR) bitdi
+- [ ] 3 code sessions done
+- [ ] Paper note written
+- [ ] Book note written
+- [ ] 1 post-mortem and 1 blog post read
+- [ ] Sunday writing (note or ADR) done

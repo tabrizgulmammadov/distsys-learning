@@ -1,27 +1,27 @@
-# ADR-NNNN: <Qısa başlıq>
+# ADR-NNNN: <Short title>
 
 - **Status:** Proposed | Accepted | Superseded by ADR-XXXX
-- **Tarix:** YYYY-MM-DD
+- **Date:** YYYY-MM-DD
 
 ## Context
 
-Hansı problem var? Hansı məhdudiyyətlər var (yük, komanda, vaxt, mövcud sistem)?
+What is the problem? What are the constraints (load, team, time, existing system)?
 
 ## Decision
 
-Nə seçdik? Bir-iki cümlə.
+What did we choose? One or two sentences.
 
 ## Alternatives
 
-| Variant | Üstünlük | Çatışmazlıq |
+| Option | Pros | Cons |
 | --- | --- | --- |
 | A | | |
 | B | | |
 
 ## Consequences
 
-- Nə asanlaşır?
-- Nə çətinləşir?
-- Hansı halda bu qərara yenidən baxırıq?
+- What becomes easier?
+- What becomes harder?
+- When do we revisit this decision?
 
-Şablon: Michael Nygard, "Documenting Architecture Decisions" (2011).
+Template based on Michael Nygard, "Documenting Architecture Decisions" (2011).
