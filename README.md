@@ -2,7 +2,7 @@
 
 ## Bu repo necə işləyir
 
-- **Backlog:** hər həftə bir [Milestone](https://github.com/tabrizgulmammadov/staff-engineer-path/milestones)-dir. Hər iş bir [Issue](https://github.com/tabrizgulmammadov/staff-engineer-path/issues)-dir.
+- **Backlog:** hər həftə bir [Milestone](https://github.com/tabrizgulmammadov/distsys-learning/milestones)-dir. Hər iş bir [Issue](https://github.com/tabrizgulmammadov/distsys-learning/issues)-dir.
 - **Label-lər:** `kod`, `paper`, `kitab`, `real-dunya`, `yazi`.
 - **Həftə bitəndə:** issue-ları bağla. Milestone faizi irəliləyişi göstərir.
 
