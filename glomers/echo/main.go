@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"log"
+
 	maelstrom "github.com/jepsen-io/maelstrom/demo/go"
 )
 
@@ -16,6 +17,7 @@ func main() {
 		}
 
 		body["type"] = "echo_ok"
+
 		return node.Reply(msg, body)
 	})
 
